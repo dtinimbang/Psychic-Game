@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en-us">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <title>Events!</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+  </head>
+  <body>
+ 
+    <div class="jumbotron">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-6">
+				</div>
+				<div class="col-md-5"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-6" id="game">
+					<p><h1>The Psychic Game</h1></p>
+					<p><h4>What letter am I thinking about?!?!?!?!</h4></p>
+					<p><h4>Wins: 0</h4></p>
+					<p><h4>Losses: 0</h4></p>
+					<p><h4>Guesses Left: 9</h4></p>
+					<p><h4>Your guesses so far: </h4></p>
+				</div>
+				<div class="col-md-5"></div>
+			</div>
+  </div>
+  
+  <script>
+
+      var alphabetLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+      var Wins = 0;
+      var losses = 0;
+      var guessLeft = 9;
+      var guessCount = []; 
+      var userGuess = null;
+      var event.key;
+      var letters = alphabetLetters [Math.floor(Math.random() * 26)];
+
+      document.onkeyup = function(event) {
+        if (event.key ==="a" || event.key === "b" || event.key === "c"){
+          if(userGuess === compGuess )
+            win++;
+        }
+
+      }
+    </script>
+  </body>
 </html>
