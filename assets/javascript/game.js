@@ -2,13 +2,15 @@
     var wins = 0;
     var losses = 0;
     var guessesLeft = 9;
-    var guessesSoFar = []; 
+    var guessesSoFar = []; //where the guesses go
     var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; //list of letters to choose from
-    
+    // above are the letter choices in array format
+
+
     document.onkeyup = function(event) {
-        var userGuess = String.fromCharCode(event.keyCode).toLowerCase(); //taking in user guess
-        var computerGuess = computerChoices[Math.floor(Math.random()*26)]; 
-        guessesSoFar.push(userGuess); //pushing user guess to guesses so far
+        var userGuess = String.fromCharCode(event.keyCode).toLowerCase(); //taking in user guess , found online
+        var computerGuess = computerChoices[Math.floor(Math.random()*26)]; //random generator used in rock paper scissors game
+        guessesSoFar.push(userGuess); //this will push the string from line 11  
 
         if (userGuess == computerGuess) {
             wins++;
@@ -23,13 +25,13 @@
             guessesSoFar.length = 0;
         }
         else if (userGuess !== computerGuess){
-            guessesLeft--; //decrementing the guesses left
+            guessesLeft--; //subtract guesses left by 1
         }  
         // This is what appears when you start game    
         var html = "<u><h1>The Psychic Game</h1></u>" + 
         "<h3>***Game in Progress***</h3>" +
         "<p>Guess what letter I'm thinking of!</p>" +
-        "<p>Wins" +  wins + 
+        "<p>Wins" +  wins +
         "</p>" +
         "<p>Losses: " + losses + 
         "</p>" +
