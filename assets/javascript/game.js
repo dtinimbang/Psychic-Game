@@ -26,7 +26,8 @@
             guessesLeft--; //decrementing the guesses left
         }  
         // This is what appears when you start game    
-        var html = "<h1>The Psychic Game</h1>" + 
+        var html = "<u><h1>The Psychic Game</h1></u>" + 
+        "<h3>***Game in Progress***</h3>" +
         "<p>Guess what letter I'm thinking of!</p>" +
         "<p>Wins" +  wins + 
         "</p>" +
